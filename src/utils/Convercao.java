@@ -1,11 +1,14 @@
 package utils;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Convercao {
 
-    public double convertendoMoedas(double taxa, double volume){
+    public BigDecimal convertendoMoedas(BigDecimal taxa, BigDecimal volume){
 
-        double conversao = taxa * volume;
-        return  conversao;
+        BigDecimal conversao = taxa.multiply(volume);
+        return  conversao.setScale(2, RoundingMode.HALF_UP);
 
     }
 }

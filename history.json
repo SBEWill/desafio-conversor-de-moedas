@@ -1,0 +1,34 @@
+[
+  {
+    "timestampIso": "2025-10-31T12:25:48.3436693-03:00[America/Sao_Paulo]",
+    "from": "USD",
+    "to": "BRL",
+    "amount": 500,
+    "rate": 5.3837,
+    "result": 2691.85
+  },
+  {
+    "timestampIso": "2025-10-31T12:20:33.3113008-03:00[America/Sao_Paulo]",
+    "from": "USD",
+    "to": "BRL",
+    "amount": 10000,
+    "rate": 5.3837,
+    "result": 53837.00
+  },
+  {
+    "timestampIso": "2025-10-31T12:20:02.7233712-03:00[America/Sao_Paulo]",
+    "from": "USD",
+    "to": "ARS",
+    "amount": 2500,
+    "rate": 1433.67,
+    "result": 3584175.00
+  },
+  {
+    "timestampIso": "2025-10-31T12:19:42.5107922-03:00[America/Sao_Paulo]",
+    "from": "USD",
+    "to": "BRL",
+    "amount": 750,
+    "rate": 5.3837,
+    "result": 4037.78
+  }
+]
