@@ -3,7 +3,7 @@ package utils;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Convercao {
+public class Conversion {
 
     public BigDecimal convertendoMoedas(BigDecimal taxa, BigDecimal volume){
 

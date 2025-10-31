@@ -31,11 +31,11 @@ public class TaxService {
 
         String json = response.body();
 
-        // Conversão para JSON
+
 
         JsonElement elemento = JsonParser.parseString(json);
         JsonObject objectRoot = elemento.getAsJsonObject();
-// Accessando o JsonObject
+
 
         BigDecimal taxa = objectRoot.get("conversion_rate").getAsBigDecimal();
 

@@ -4,7 +4,7 @@ import model.ConversionRecord;
 import model.Currency;
 import service.HistoryManager;
 import service.LogService;
-import utils.Convercao;
+import utils.Conversion;
 import utils.TaxService;
 
 import java.io.IOException;
@@ -15,23 +15,15 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Main integrado:
- * - AULA 3: usa BigDecimal (precisão financeira)
- * - AULA 4: mantém histórico (HistoryManager) e logs (LogService)
- *
- * Requisitos:
- * - utils.TaxService.obterTaxa(String fromCode, String toCode) (Aula 1)
- * - utils.Convercao.convertendoMoedas(BigDecimal, BigDecimal) (Aula 3)
- */
+
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Convercao convercao = new Convercao();
+        Conversion convercao = new Conversion();
         TaxService importaApi = new TaxService();
 
-        // AULA 4: criar history manager e logger (arquivos na raiz do projeto)
+
         HistoryManager history = new HistoryManager(50, Path.of("history.json"));
         LogService logger = new LogService(Path.of("conversions.log"));
 
@@ -48,7 +40,7 @@ public class Main {
                 System.out.println("Saindo...");
                 break;
             } else if ("2".equals(opc)) {
-                // Mostrar histórico
+
                 List<ConversionRecord> list = history.listAll();
                 if (list.isEmpty()) {
                     System.out.println("Histórico vazio.");
@@ -65,7 +57,7 @@ public class Main {
                 continue;
             }
 
-            // Opção 1: conversão
+
             Currency from = lerCurrency(scanner, "Escolha a moeda de origem:");
             Currency to = lerCurrency(scanner, "Escolha a moeda de destino:");
 
@@ -74,7 +66,7 @@ public class Main {
                 continue;
             }
 
-            // AULA 3: ler valor como BigDecimal
+
             BigDecimal quantidade;
             try {
                 System.out.print("Digite o valor a ser convertido: ");
@@ -95,10 +87,10 @@ public class Main {
                 BigDecimal taxa = importaApi.obterTaxa(from.code(), to.code());
                 BigDecimal resultado = convercao.convertendoMoedas(taxa, quantidade);
 
-                String simbolo = obterSimbolo(to); // para exibição simples
+                String simbolo = obterSimbolo(to);
                 System.out.printf("Resultado: %s%s%n", simbolo, resultado);
 
-                // AULA 4: criar registro, salvar no histórico e gravar log
+
                 String nowIso = ZonedDateTime.now().format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
                 ConversionRecord rec = new ConversionRecord(nowIso, from, to, quantidade, taxa, resultado);
                 history.add(rec);
@@ -143,7 +135,7 @@ public class Main {
             case BRL: return "R$ ";
             case ARS: return "ARS ";
             case BOB: return "Bs ";
-            default: return ""; // USD e demais
+            default: return ""; //
         }
     }
 }

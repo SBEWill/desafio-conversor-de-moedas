@@ -7,9 +7,7 @@ import java.nio.file.*;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Serviço simples de logs que grava linhas em arquivo.
- */
+
 public class LogService {
     private final Path logFile;
     private final DateTimeFormatter fmt = DateTimeFormatter.ISO_ZONED_DATE_TIME;
