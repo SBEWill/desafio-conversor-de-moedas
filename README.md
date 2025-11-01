@@ -180,8 +180,11 @@ Registra cada operação como texto:
 ## 👤 Dados do Autor
 
 **Nome:** Willian Diniz
+
 **E-mail:** williandiniz2412@hotmail.com
+
 **GitHub:** https://github.com/SBEWill
+
 **LinkedIn:** https://www.linkedin.com/in/willian-diniz-2360b74b/
 
 ---
