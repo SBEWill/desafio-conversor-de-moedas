@@ -5,6 +5,9 @@ public enum Currency {
     USD("USD"),
     BRL("BRL"),
     ARS("ARS"),
+    EUR("EUR"),
+    CNY("CNY"),
+    KES("KES"),
     BOB("BOB");
 
     private final String code;

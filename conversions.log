@@ -5,3 +5,11 @@
 2025-10-31T12:20:02.7233712-03:00[America/Sao_Paulo] | USD -> ARS | amount=2500 | rate=1433.67 | result=3584175.00
 2025-10-31T12:20:33.3113008-03:00[America/Sao_Paulo] | USD -> BRL | amount=10000 | rate=5.3837 | result=53837.00
 2025-10-31T12:25:48.3436693-03:00[America/Sao_Paulo] | USD -> BRL | amount=500 | rate=5.3837 | result=2691.85
+2025-11-01T13:35:24.8449671-03:00[America/Sao_Paulo] | CNY -> USD | amount=1000 | rate=0.1404 | result=140.40
+2025-11-01T13:35:47.6927138-03:00[America/Sao_Paulo] | KES -> USD | amount=1000 | rate=0.007740 | result=7.74
+2025-11-01T13:36:05.9141819-03:00[America/Sao_Paulo] | USD -> KES | amount=1000 | rate=129.1939 | result=129193.90
+2025-11-01T13:38:30.3532907-03:00[America/Sao_Paulo] | USD -> BRL | amount=10000 | rate=5.3829 | result=53829.00
+2025-11-01T13:38:45.6788019-03:00[America/Sao_Paulo] | BRL -> USD | amount=10000 | rate=0.1858 | result=1858.00
+2025-11-01T13:41:46.9633728-03:00[America/Sao_Paulo] | USD -> CNY | amount=100 | rate=7.1204 | result=712.04
+2025-11-01T13:44:02.2229901-03:00[America/Sao_Paulo] | USD -> BRL | amount=100 | rate=5.3829 | result=538.29
+2025-11-01T13:49:20.5601288-03:00[America/Sao_Paulo] | USD -> BRL | amount=1000 | rate=5.3829 | result=5382.90

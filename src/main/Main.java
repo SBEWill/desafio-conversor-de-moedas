@@ -23,7 +23,6 @@ public class Main {
         Conversion convercao = new Conversion();
         TaxService importaApi = new TaxService();
 
-
         HistoryManager history = new HistoryManager(50, Path.of("history.json"));
         LogService logger = new LogService(Path.of("conversions.log"));
 
@@ -45,7 +44,7 @@ public class Main {
                 if (list.isEmpty()) {
                     System.out.println("Histórico vazio.");
                 } else {
-                    list.forEach(System.out::println);
+                    list.forEach(System.out::println);// for each
                 }
                 continue;
             } else if ("3".equals(opc)) {
@@ -59,14 +58,13 @@ public class Main {
 
 
             Currency from = lerCurrency(scanner, "Escolha a moeda de origem:");
+
             Currency to = lerCurrency(scanner, "Escolha a moeda de destino:");
 
             if (from == to) {
                 System.out.println("Moeda de origem e destino são iguais. Escolha moedas diferentes.");
                 continue;
             }
-
-
             BigDecimal quantidade;
             try {
                 System.out.print("Digite o valor a ser convertido: ");
@@ -82,8 +80,6 @@ public class Main {
             }
 
             try {
-
-
                 BigDecimal taxa = importaApi.obterTaxa(from.code(), to.code());
                 BigDecimal resultado = convercao.convertendoMoedas(taxa, quantidade);
 
@@ -110,6 +106,7 @@ public class Main {
 
     private static Currency lerCurrency(Scanner scanner, String prompt) {
         Currency[] moedas = Currency.values();
+
         while (true) {
             System.out.println(prompt);
             for (int i = 0; i < moedas.length; i++) {
@@ -135,7 +132,10 @@ public class Main {
             case BRL: return "R$ ";
             case ARS: return "ARS ";
             case BOB: return "Bs ";
-            default: return ""; //
+            case KES: return "KSh ";
+            case EUR: return "€ ";
+            case CNY: return "¥ ";
+            default: return "$ ";
         }
     }
 }

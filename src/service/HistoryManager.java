@@ -58,7 +58,6 @@ public class HistoryManager {
                 String json = Files.readString(file);
                 ConversionRecord[] arr = gson.fromJson(json, ConversionRecord[].class);
                 if (arr != null) {
-                    // adicionar do último para o primeiro para preservar a ordem mais recente primeiro
                     for (int i = arr.length - 1; i >= 0; i--) {
                         history.addFirst(arr[i]);
                     }

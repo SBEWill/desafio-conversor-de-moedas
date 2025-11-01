@@ -2,10 +2,6 @@ package model;
 
 import java.math.BigDecimal;
 
-/**
- * Registro imutável simplificado para histórico de conversões.
- * Timestamp é armazenado como String (ISO) para simplicidade com Gson.
- */
 public class ConversionRecord {
     private final String timestampIso;
     private final Currency from;
