@@ -118,8 +118,25 @@ Ajusta o resultado para 2 casas decimais com `RoundingMode.HALF_UP`.
 
 ## 🔐 Sobre a API Key
 
-A chave de API utilizada (`TaxService.apiKey`) deve ser obtida gratuitamente em [ExchangeRate API](https://www.exchangerate-api.com/).
-Para segurança, recomenda-se **não deixar a chave exposta no código**, mas sim carregá-la via variável de ambiente ou arquivo `.env`.
+
+Para rodar o projeto, você precisará de uma chave da API de câmbio (ExchangeRate-API) e deve configurar o ambiente para que o programa possa ler essa chave com segurança.
+
+1. Obtenha a Chave de API
+   Crie uma conta gratuita na ExchangeRate-API para obter sua chave pessoal.
+
+2. Configuração Local da Chave Secreta
+   A chave de API não deve ser enviada para o GitHub. Siga os passos abaixo para configurá-la localmente:
+
+Na raiz do seu projeto (no mesmo nível da pasta src), crie um novo arquivo chamado config.properties.
+
+Adicione a seguinte linha a este arquivo, substituindo SUA_CHAVE_AQUI pela chave obtida no Passo 1:
+
+Properties
+
+API_KEY=SUA_CHAVE_AQUI
+
+⚠️ Importante: O arquivo config.properties está listado no .gitignore para garantir que suas credenciais permaneçam privadas.
+
 
 ---
 
