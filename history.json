@@ -1,5 +1,13 @@
 [
   {
+    "timestampIso": "2025-11-03T00:40:32.8080394-03:00[America/Sao_Paulo]",
+    "from": "BRL",
+    "to": "USD",
+    "amount": 1000,
+    "rate": 0.1858,
+    "result": 185.80
+  },
+  {
     "timestampIso": "2025-11-01T14:36:40.3945187-03:00[America/Sao_Paulo]",
     "from": "USD",
     "to": "BRL",
