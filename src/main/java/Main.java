@@ -1,5 +1,3 @@
-package main;
-
 import model.ConversionRecord;
 import model.Currency;
 import service.HistoryManager;

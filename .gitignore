@@ -6,3 +6,19 @@
 .DS_Store
 *.log
 config.properties
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven
+/target/
+
+# Gradle
+/.gradle/
+
+# Logs e arquivos do sistema
+*.log
+.DS_Store
+
+# Outros
+*.class
